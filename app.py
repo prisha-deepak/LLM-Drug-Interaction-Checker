@@ -13,8 +13,11 @@ model = load_model()
 # Function to fetch drug interactions and side effects
 def get_drug_interactions(medications):
     medications_str = ", ".join(medications)
+    def get_drug_interactions(medications_or_brands):
+    print(f"Debug: medications_or_brands = {medications_or_brands}")
     prompt = f"Identify potential interactions and side effects between the following medications or tablet brands: {medications_or_brands}. Provide advice for safe usage based on both the active ingredients and brand formulations."
-    print("")
+    # Your model code here
+
     # Generate response from Hugging Face model
     response = model(prompt, max_length=200, num_return_sequences=1)
     
