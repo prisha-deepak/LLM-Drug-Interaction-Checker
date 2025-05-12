@@ -14,7 +14,6 @@ model = load_model()
 # Function to fetch drug interactions and side effects
 def get_drug_interactions(medications):
     medications_str = ", ".join(medications)
-    print(f"Debug: medications_or_brands = {medications_or_brands}")
     prompt = f"Identify potential interactions and side effects between the following medications or tablet brands: {medications_or_brands}. Provide advice for safe usage based on both the active ingredients and brand formulations."
     # Your model code here
 
