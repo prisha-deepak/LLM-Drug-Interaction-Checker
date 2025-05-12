@@ -4,7 +4,8 @@ from transformers import pipeline
 # Load a pre-trained model from Hugging Face (e.g., GPT-2 or GPT-J)
 @st.cache_resource
 def load_model():
-    return pipeline("text-generation", model="sshleifer/tiny-gpt2")
+    return pipeline("token-classification", model="d4data/biomedical-ner-all", aggregation_strategy="simple")
+
  # You can replace gpt2 with a healthcare-specific model
 
 # Initialize the model
